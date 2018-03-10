@@ -1,0 +1,27 @@
+{
+  "name": "color-json",
+  "version": "1.0.0",
+  "description": "Color JSON in the console with no dependencies",
+  "main": "color-json.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zvakanaka/color-json.git"
+  },
+  "keywords": [
+    "color",
+    "json",
+    "console"
+  ],
+  "author": "Adam Quinton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zvakanaka/color-json/issues"
+  },
+  "homepage": "https://github.com/zvakanaka/color-json#readme"
+}
