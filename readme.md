@@ -60,5 +60,7 @@ console.log(colorJson(topPlanets, undefined, customColorMap));
 ```js
 console.log(colorJson(topPlanets, undefined, undefined, 4));
 ```
+## Color Tool
+[hex to console color](https://codepen.io/zvakanaka/pen/MVWGJG)
 ## Credits
  [user123444555621](https://stackoverflow.com/a/7220510/4151489) for the syntax highlight regular expressions
