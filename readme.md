@@ -1,8 +1,9 @@
 # color-json
 Color JSON in the console with no dependencies
 
-## Usage
 ![screenshot](https://i.imgur.com/i6Kp3rZm.png)
+
+## Usage
 ### Default Usage
 ```js
 const colorJson = require('color-json');
