@@ -1,4 +1,3 @@
-# color-json
 Color JSON in the console with no dependencies
 
 ![screenshot](https://i.imgur.com/i6Kp3rZm.png)
