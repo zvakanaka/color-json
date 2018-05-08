@@ -1,5 +1,5 @@
 Color JSON in the console with no dependencies
-https://imgur.com/175gebf
+
 ![screenshot](https://i.imgur.com/175gebf.png)
 
 ## Usage
