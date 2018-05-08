@@ -1,11 +1,11 @@
 Color JSON in the console with no dependencies
-
-![screenshot](https://i.imgur.com/i6Kp3rZm.png)
+https://imgur.com/175gebf
+![screenshot](https://i.imgur.com/175gebf.png)
 
 ## Usage
 ### Default Usage
 ```js
-const colorJson = require('color-json');
+const cj = require('color-json');
 
 const topPlanets = [
   {
@@ -26,7 +26,7 @@ const topPlanets = [
   }
 ];
 
-console.log(colorJson(topPlanets));
+console.log(cj(topPlanets));
 ```
 ### Switch Colors
 ```js
@@ -38,7 +38,7 @@ const customColors = {
   null: 'red',
   key: 'green'
 };
-console.log(colorJson(topPlanets, customColors));
+console.log(cj(topPlanets, customColors));
 ```
 ### Customize Colors
 ```js
@@ -52,12 +52,12 @@ const customColorMap = {
   cyan: '\x1b[38;2;75;167;239m',
   white: '\x1b[38;2;219;223;244m'
 };
-console.log(colorJson(topPlanets, undefined, customColorMap));
+console.log(cj(topPlanets, undefined, customColorMap));
 ```
 
 ### Custom Spacing
 ```js
-console.log(colorJson(topPlanets, undefined, undefined, 4));
+console.log(cj(topPlanets, undefined, undefined, 4));
 ```
 ## Color Tool
 [hex to console color](https://codepen.io/zvakanaka/pen/MVWGJG)
