@@ -1,3 +1,4 @@
+const supportsColor = require('./lib/supportsColor');
 
 const defaultColorMap = {
   black: '\x1b[30m',
@@ -19,7 +20,7 @@ const defaultColors = {
   key: 'white'
 };
 
-module.exports = function syntaxHighlight(json, colors = defaultColors, colorMap = defaultColorMap, spacing = 2) { // thanks: https://stackoverflow.com/a/7220510/4151489
+module.exports = supportsColor() ? function syntaxHighlight(json, colors = defaultColors, colorMap = defaultColorMap, spacing = 2) { // thanks: https://stackoverflow.com/a/7220510/4151489
   if (typeof json != 'string') json = JSON.stringify(json, undefined, spacing);
   else json = JSON.stringify(JSON.parse(json), undefined, 2);
   return colorMap[colors.separator] + json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
@@ -32,4 +33,8 @@ module.exports = function syntaxHighlight(json, colors = defaultColors, colorMap
     const color = colorMap[colors[colorCode]] || '';
     return `\x1b[0m${color}${match}${colorMap[colors.separator]}`;
   }) + '\x1b[0m';
-}
+} : function syntaxNoHighlight(json, colors = defaultColors, colorMap = defaultColorMap, spacing = 2) {
+  if (typeof json != 'string') json = JSON.stringify(json, undefined, spacing);
+  else json = JSON.stringify(JSON.parse(json), undefined, 2);
+  return json;
+};
