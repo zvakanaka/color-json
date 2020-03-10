@@ -22,7 +22,7 @@ const defaultColors = {
 
 module.exports = supportsColor() ? function syntaxHighlight(json, colors = defaultColors, colorMap = defaultColorMap, spacing = 2) { // thanks: https://stackoverflow.com/a/7220510/4151489
   if (typeof json != 'string') json = JSON.stringify(json, undefined, spacing);
-  else json = JSON.stringify(JSON.parse(json), undefined, 2);
+  else json = JSON.stringify(JSON.parse(json), undefined, spacing);
   return colorMap[colors.separator] + json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
     let colorCode = 'number';
     if (/^"/.test(match)) {
@@ -35,6 +35,6 @@ module.exports = supportsColor() ? function syntaxHighlight(json, colors = defau
   }) + '\x1b[0m';
 } : function syntaxNoHighlight(json, colors = defaultColors, colorMap = defaultColorMap, spacing = 2) {
   if (typeof json != 'string') json = JSON.stringify(json, undefined, spacing);
-  else json = JSON.stringify(JSON.parse(json), undefined, 2);
+  else json = JSON.stringify(JSON.parse(json), undefined, spacing);
   return json;
 };
