@@ -22,6 +22,9 @@ const topPlanets = [
 
 console.log(colorJson(topPlanets));
 
+console.log('passing in already stringified data:');
+console.log(colorJson(JSON.stringify(topPlanets)));
+
 console.log('switch colors:');
 const customColors = {
   separator: 'yellow',
@@ -46,5 +49,11 @@ const customColorMap = {
 };
 console.log(colorJson(topPlanets, undefined, customColorMap));
 
-console.log('custom spacing:');
+console.log('custom spacing (4):');
 console.log(colorJson(topPlanets, undefined, undefined, 4));
+
+console.log('custom spacing (0):');
+console.log(colorJson(topPlanets, undefined, undefined, 0));
+
+console.log('passing in already stringified data with custom spacing (0):');
+console.log(colorJson(JSON.stringify(topPlanets), undefined, undefined, 0));

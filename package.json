@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "node tests/test.js; TMP_FORCE_NO_COLOR=$FORCE_NO_COLOR; export FORCE_NO_COLOR=true; node tests/test.js; export FORCE_NO_COLOR=$TMP_FORCE_NO_COLOR; unset TMP_FORCE_NO_COLOR"
+    "test": "node tests/test.js; TMP_FORCE_NO_COLOR=$FORCE_NO_COLOR; export FORCE_NO_COLOR=true; echo '=====================\nTesting without color\n====================='; node tests/test.js; export FORCE_NO_COLOR=$TMP_FORCE_NO_COLOR; unset TMP_FORCE_NO_COLOR"
   },
   "repository": {
     "type": "git",
