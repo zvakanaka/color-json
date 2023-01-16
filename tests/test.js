@@ -1,4 +1,4 @@
-const colorJson = require('../color-json.js');
+import colorJson from '../color-json.js';
 
 console.log('default usage:');
 const topPlanets = [
