@@ -5,7 +5,7 @@ Color JSON in the console with no dependencies
 ## Usage
 ### Default Usage
 ```js
-const cj = require('color-json');
+import cj from 'color-json';
 
 const topPlanets = [
   {
@@ -59,7 +59,16 @@ console.log(cj(topPlanets, undefined, customColorMap));
 ```js
 console.log(cj(topPlanets, undefined, undefined, 4));
 ```
+
+## Versions
+### 3.0.x
+Converted to [ESM](https://github.com/sindresorhus/meta/discussions/15) (`import` instead of `require`).
+### 2.x.x 
+Use this version if you still need `require` syntax (CommonJS).
+
 ## Color Tool
 [hex to console color](https://codepen.io/zvakanaka/pen/MVWGJG)
+
 ## Credits
- [user123444555621](https://stackoverflow.com/a/7220510/4151489) for the syntax highlight regular expressions
+[user123444555621](https://stackoverflow.com/a/7220510/4151489) for the syntax highlight regular expressions  
+
