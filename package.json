@@ -1,6 +1,6 @@
 {
   "name": "color-json",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Color JSON in the console with no dependencies",
   "type": "module",
   "directories": {
