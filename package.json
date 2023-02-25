@@ -2,6 +2,8 @@
   "name": "color-json",
   "version": "3.0.2",
   "description": "Color JSON in the console with no dependencies",
+  "main": "color-json.js",
+  "types": "color-json.d.ts",
   "type": "module",
   "directories": {
     "test": "tests"
