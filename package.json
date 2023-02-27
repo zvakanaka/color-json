@@ -1,6 +1,6 @@
 {
   "name": "color-json",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Color JSON in the console with no dependencies",
   "main": "color-json.js",
   "types": "color-json.d.ts",
