@@ -1,18 +1,14 @@
 {
   "name": "color-json",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Color JSON in the console with no dependencies",
-  "main": "color-json.js",
-  "types": "color-json.d.ts",
   "type": "module",
   "directories": {
     "test": "tests"
   },
   "exports": {
-    ".": {
-      "import": "./color-json.js",
-      "types": "./color-json.d.ts"
-    }
+    "types": "./color-json.d.ts",
+    "default": "./color-json.js"
   },
   "scripts": {
     "test": "node tests/test.js; TMP_FORCE_NO_COLOR=$FORCE_NO_COLOR; export FORCE_NO_COLOR=true; echo '=====================\nTesting without color\n====================='; node tests/test.js; export FORCE_NO_COLOR=$TMP_FORCE_NO_COLOR; unset TMP_FORCE_NO_COLOR"
@@ -28,9 +24,12 @@
     "terminal"
   ],
   "author": "Adam Quinton",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zvakanaka/color-json/issues"
   },
-  "homepage": "https://github.com/zvakanaka/color-json#readme"
+  "homepage": "https://github.com/zvakanaka/color-json#readme",
+  "engines": {
+    "node": ">=12"
+  }
 }
