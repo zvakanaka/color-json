@@ -27,8 +27,8 @@ export type Colors = {
  * @returns {string} Stringified JSON colored with ANSI escape characters.
  */
 export default function colorJson(
-  json: Object | string,
+  json: (Object | string),
   colors?: Colors,
   colorMap?: ColorMap,
-  spacing?: number
+  spacing?: number,
 ): string
