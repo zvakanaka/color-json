@@ -1,4 +1,4 @@
-import colorJson from '../color-json.js';
+import colorJson from '../index.js';
 
 console.log('default usage:');
 const topPlanets = [
